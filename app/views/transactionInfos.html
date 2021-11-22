@@ -1,0 +1,82 @@
+<div class="container" style="padding-top: 50px;">
+
+    <h1>交易
+        <small>查看有关以太坊交易的信息</small>
+    </h1>
+
+    <div id="tx-97785883" class="txdiv">
+        <table class="table table-striped" cellpadding="0" cellspacing="0" style="padding:0px;float:left;margin:0px;width:100%">
+            <tbody>
+            <tr>
+                <th colspan="3" align="left"><a class="hash-link" href="./#/transaction/{{txId}}">{{txId}}</a> <span class="pull-right"></span></th>
+            </tr>
+            <tr>
+                <td width="500px" class="">
+                    <a href="./#/address/{{from}}">{{from}}</a>
+                    <br>
+                </td>
+                <td width="48px" class="" style="padding:4px;text-align:center;vertical-align:middle;">
+                    <img src="https://mao-bucket.oss-cn-guangzhou.aliyuncs.com/img/success.png" style="width:20px;height:20px" >  <!--TODO upload the image on the server-->
+                </td>
+                <td class="">
+                    <a href="./#/address/{{to}}">{{to}}</a>
+                    <span class="pull-right">
+                        <span>{{ethValue}} ETH</span>
+                    </span>
+                    <br>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div style="padding-bottom:30px;width:100%;text-align:right;clear:both">   <!--TODO no style tags...-->
+            <button class="btn btn-primary">{{conf}} Confirmations</button>
+            <button class="btn btn-success cb"><span>{{ethValue}} ETH</span></button>
+        </div>
+
+        <table class="table table-striped">
+            <tbody><tr>
+                <td colspan="2" style="text-align:left">区块详情</td>
+            </tr>
+            <tr>
+                <td style="width:80px;height:30px">交易哈希</td>
+                <td><a href="./#/block/{{blockHash}}">{{blockHash}}</a></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left">时间戳</td>
+                <td>
+                    {{time}}
+                </td>
+            </tr>
+            <tr>
+                <td>区块号</td>
+                <td>
+                    <a href="./#/block/{{blockNumber}}">{{blockNumber}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>手续费</td>
+                <td>{{gas}}</td>
+            </tr>
+            <tr>
+                <td>燃料价格</td>
+                <td>{{gasPrice}}</td>
+            </tr>
+            <tr>
+                <td>发件人在此之前进行的交易次数</td>
+                <td>{{nonce}}</td>
+            </tr>
+            <tr>
+                <td>交易价格</td>
+                <td>{{txprice}}</td>
+            </tr>
+            <tr>
+                <td>输入数据</td>
+                <td>{{input}}</td>
+            </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
